@@ -98,7 +98,7 @@ angular.module('brushfire').controller('videosPageController', [
       // (also disables form submission)
       $scope.busySubmittingVideo = true;
 
-      io.socket.post('/video', {
+      io.socket.post('/video/addVideo', {
         title: _newVideo.title,
         src: _newVideo.src
       }, function whenServerResponds(data, JWR) {
