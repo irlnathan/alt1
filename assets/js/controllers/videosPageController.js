@@ -18,7 +18,7 @@ angular.module('brushfire').controller('videosPageController', [
 
     
       // Get the existing videos.
-      io.socket.get('/video', function whenServerResponds(data, JWR) {
+      io.socket.get('/video/index', function whenServerResponds(data, JWR) {
         $scope.videosLoading = false;
         console.log('Fetched videos and subscribed... Response:', data);
 
